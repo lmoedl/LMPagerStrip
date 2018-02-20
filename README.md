@@ -10,7 +10,7 @@ I recommend coping the three necessary files (LMPagerStripViewController, LMPage
 ## Demo
 PagerStrip can be used with a standard Navigation Bar or iOS 11 styled Navigation Bar with large titles enabled.
 
-<img src="https://github.com/lmoedl/LMPagerStrip/blob/master/Design/normal-nav-bar.png" width="250" alt="Standard NavBar") ![iOS 11 NavBar](https://github.com/lmoedl/LMPagerStrip/blob/master/Design/ios11-nav-bar.png)
+<img src="https://github.com/lmoedl/LMPagerStrip/blob/master/Design/normal-nav-bar.png" width="250") ![iOS 11 NavBar](https://github.com/lmoedl/LMPagerStrip/blob/master/Design/ios11-nav-bar.png)
 
 You can add as many ViewControllers as you want but I recommend not more than 5 because of design
 
