@@ -21,34 +21,34 @@ If you need help, have a look at the [example](https://github.com/lmoedl/LMPager
 
 First you need an UIViewController embedded into an UINavigationController. You can do it the easy way using the Storyboard (select the ViewController ➡️ Editor ➡️ Embed in ➡️ Navigation Controller) or programmatically (maybe as RootViewController inside AppDelegate):
 
-```
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-window = UIWindow(frame: UIScreen.main.bounds)
-let navigationController = UINavigationController()
-let vc = ViewController()    //Name of your VC
-navigationController.viewControllers = [vc]
-window!.rootViewController = navigationController
-window!.makeKeyAndVisible()
-return true
+  window = UIWindow(frame: UIScreen.main.bounds)
+  let navigationController = UINavigationController()
+  let vc = ViewController()    //Name of your VC
+  navigationController.viewControllers = [vc]
+  window!.rootViewController = navigationController
+  window!.makeKeyAndVisible()
+  return true
 }
 ```
 
 After that you need to instantiate your content ViewControllers which should be switched through later inside viewDidLoad of your ContentViewController:
 
-```
+```swift
 let storyboard = UIStoryboard(name: "Main", bundle: nil)
 let vc1 = storyboard.instantiateViewController(withIdentifier: "page")
 ```
 
 Then instantiate the LMPagerStripViewController and add the Content ViewControllers as well as the icons for the Strip:
 
-```
+```swift
 let pagerStripVC = LMPagerStripViewController(pages: [vc1, vc2, vc3, ...], icons: [img1, img2, im3, ...])
 ```
 
 Set the LMPagerStripViewController as ChildViewController of your current ContainerViewController:
 
-```
+```swift
 self.view.addSubview(pagerStripVC.view)
 self.addChildViewController(pagerStripVC)
 pagerStripVC.didMove(toParentViewController: self)
@@ -59,7 +59,7 @@ Here you go 🚀
 ## Customizations
 You can change the background color of the Strip as well as the tintColor for the selected and unselected state of the icons:
 
-```
+```swift
 pagerStripVC.pagerStripBackgroundColor = .orange
 pagerStripVC.barItemSelectedColor = .white
 pagerStripVC.barItemUnselectedColor = .gray
@@ -68,7 +68,9 @@ pagerStripVC.barItemUnselectedColor = .gray
 ## What's next
 
 ✅ Basic PagerStrip
+
 ☑️ Scrollable PagerStrip
+
 ☑️ Adding animated icons using [Lottie](https://github.com/airbnb/lottie-ios)
 
 ## License
